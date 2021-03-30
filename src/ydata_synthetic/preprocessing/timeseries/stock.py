@@ -12,6 +12,7 @@ def transformations(seq_len: int):
     try:
         file_path = os.path.join(os.path.dirname(os.path.join('..', os.path.dirname(__file__))), 'data')
         stock_df = pd.read_csv(os.path.join(file_path, 'stock.csv'))
+        print('Inside transformations1')
     except:
         stock_url = 'https://query1.finance.yahoo.com/v7/finance/download/GOOG?period1=1483228800&period2=1611446400&interval=1d&events=history&includeAdjustedClose=true'
         request = req.get(stock_url)
